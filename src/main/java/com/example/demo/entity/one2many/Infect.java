@@ -3,6 +3,7 @@ package com.example.demo.entity.one2many;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,7 +25,8 @@ public class Infect { // 傳染病
 	@Column(nullable = false, length = 50)
 	private String name;
 	
-	@OneToMany // 一對多
+	//@OneToMany // 一對多
+	@OneToMany(cascade = CascadeType.PERSIST) // 一對多 + 聯集新增
 	@JoinColumn(name = "infect_id")
 	private Set<Vaccine> vaccines = new LinkedHashSet<>();
 
