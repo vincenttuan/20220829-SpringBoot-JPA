@@ -21,6 +21,7 @@ public class Department {
 	@Column(nullable = false, length = 50)
 	private String name;
 	
+	//@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}) // 雙向關係需要使用聯級新增
 	@OneToOne(cascade = CascadeType.ALL) // 雙向關係需要使用聯級新增
 	@JoinColumn(name = "manager_id")
 	private Manager manager;

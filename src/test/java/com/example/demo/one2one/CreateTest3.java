@@ -21,9 +21,9 @@ public class CreateTest3 {
 	@Test
 	void test() {
 		Manager manager = new Manager();
-		manager.setName("John");
+		manager.setName("Mary");
 		Department department = new Department();
-		department.setName("IT");
+		department.setName("Sales");
 		
 		// 設置關聯關係
 		department.setManager(manager);
