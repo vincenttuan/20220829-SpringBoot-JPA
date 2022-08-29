@@ -18,7 +18,7 @@ public class Manager {
 	@Column(nullable = false, length = 50)
 	private String name;
 	
-	@OneToOne
+	@OneToOne(mappedBy = "manager") // 不維護關聯關係, 而由 Department 的 manager 來維護關聯關係
 	private Department department;
 	
 	public Long getId() {
