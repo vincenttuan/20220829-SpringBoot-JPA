@@ -21,5 +21,8 @@ public class QueryTest1 {
 	public void test() {
 		MenuItem m1 = menuItemRepository.findById(1L).get();
 		System.out.println(m1.getName());
+		
+		System.out.println(m1.getMenuGroup());
+		
 	}
 }

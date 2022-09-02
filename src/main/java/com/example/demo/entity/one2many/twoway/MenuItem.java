@@ -2,6 +2,7 @@ package com.example.demo.entity.one2many.twoway;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,7 +25,7 @@ public class MenuItem {
 	
 	// 雙向多對一
 	@JoinColumn(name = "group_id")
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	private MenuGroup menuGroup;
 
 	public Long getId() {
