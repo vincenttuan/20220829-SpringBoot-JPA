@@ -20,28 +20,23 @@ public class CreateTest {
 	
 	@Test
 	public void test() {
-		Customer c1 = new Customer();
-		c1.setName("John");
-		c1.setAge(20);
+		Customer c1 = new Customer("John", 20);
+		//Customer c2 = new Customer("Mary", 19);
 		
-		Customer c2 = new Customer();
-		c2.setName("Mary");
-		c2.setAge(19);
-		
-		Order o1 = new Order();
-		o1.setName("A-1");
-		
-		Order o2 = new Order();
-		o2.setName("B-2");
-		
-		Order o3 = new Order();
-		o3.setName("C-3");
+		Order o1 = new Order("A-1");
+		Order o2 = new Order("B-2");
+		//Order o3 = new Order("C-3");
 		
 		// 設置關聯關係
 		o1.setCustomer(c1);
 		o2.setCustomer(c1);
-		o3.setCustomer(c2);
+		//o3.setCustomer(c2);
 		
+		// 執行保存操作
+		// 先保存 "1" 的一方再保存 "多" 的一方
+		customerRepository.save(c1);
+		orderRepository.save(o1);
+		orderRepository.save(o2);
 		
 		
 	}
