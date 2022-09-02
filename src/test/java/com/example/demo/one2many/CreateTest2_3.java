@@ -39,7 +39,6 @@ public class CreateTest2_3 {
 		m2.setMenuGroup(g);
 		
 		// 執行保存動作
-		// CreateTest2_2.java
 		menuGroupRepository.save(g);
 	}
 }
