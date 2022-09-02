@@ -10,7 +10,7 @@ import com.example.demo.repository.MenuGroupRepository;
 import com.example.demo.repository.MenuItemRepository;
 
 @SpringBootTest
-public class CreateTest2 {
+public class CreateTest2_1 {
 	
 	@Autowired
 	MenuGroupRepository menuGroupRepository;
