@@ -28,8 +28,8 @@ public class CreateTest2 {
 		m1.setPrice(20);
 		
 		MenuItem m2 = new MenuItem();
-		m2.setName("可樂");
-		m2.setPrice(20);
+		m2.setName("漢堡");
+		m2.setPrice(40);
 		
 		// 設置關聯關係 
 		g.getItems().add(m1);
