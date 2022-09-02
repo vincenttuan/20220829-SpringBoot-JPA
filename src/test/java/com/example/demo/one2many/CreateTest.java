@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.demo.entity.one2many.Infect;
-import com.example.demo.entity.one2many.Vaccine;
+import com.example.demo.entity.one2many.oneway.Infect;
+import com.example.demo.entity.one2many.oneway.Vaccine;
 import com.example.demo.repository.InfectRepository;
 import com.example.demo.repository.VaccineRepository;
 

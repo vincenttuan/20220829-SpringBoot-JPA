@@ -1,4 +1,4 @@
-package com.example.demo.entity.one2many;
+package com.example.demo.entity.one2many.oneway;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
