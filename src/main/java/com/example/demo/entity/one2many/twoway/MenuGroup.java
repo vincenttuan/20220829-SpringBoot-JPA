@@ -6,6 +6,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,7 +25,7 @@ public class MenuGroup {
 	
 	// 雙向一對多
 	// 1 的一方必須使用 mappedBy 來放棄維護關聯關係, 如此也不用 @JoinColumn
-	@OneToMany(mappedBy = "menuGroup", cascade = CascadeType.PERSIST)
+	@OneToMany(mappedBy = "menuGroup", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
 	private Set<MenuItem> items = new LinkedHashSet<>();
 
 	public Long getId() {
