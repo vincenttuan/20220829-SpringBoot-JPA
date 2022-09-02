@@ -35,12 +35,12 @@ public class CreateTest2_3 {
 		
 		// 設置關聯關係 
 		// 因為在 1 的一方有設定 mappedBy 所以下面二行可以不用撰寫
-		//g.getItems().add(m1);
-		//g.getItems().add(m2);
+		g.getItems().add(m1); // MenuGroup 聯級新增時此行要加入
+		g.getItems().add(m2); // MenuGroup 聯級新增時此行要加入
 		m1.setMenuGroup(g);
 		m2.setMenuGroup(g);
 		
-		// 執行保存動作 (聯級新增)
+		// 執行保存動作 (聯級新增, 1的一方與多的一方都會被新增)
 		// 在 MenuGroup 1 的一方加上 cascade = CascadeType.PERSIST
 		menuGroupRepository.save(g);
 	}
