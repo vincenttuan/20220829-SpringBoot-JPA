@@ -32,6 +32,7 @@ public class CreateTest2_2 {
 		m2.setPrice(35);
 		
 		// 設置關聯關係 
+		// 因為在 1 的一方有設定 mappedBy 所以下面二行可以不用撰寫
 		//g.getItems().add(m1);
 		//g.getItems().add(m2);
 		m1.setMenuGroup(g);
