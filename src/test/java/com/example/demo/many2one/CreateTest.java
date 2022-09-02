@@ -20,8 +20,8 @@ public class CreateTest {
 	
 	@Test
 	public void test() {
-		Customer c1 = new Customer("John", 20);
-		//Customer c2 = new Customer("Mary", 19);
+		Customer c1 = new Customer("John");
+		//Customer c2 = new Customer("Mary");
 		
 		Order o1 = new Order("A-1");
 		Order o2 = new Order("B-2");
