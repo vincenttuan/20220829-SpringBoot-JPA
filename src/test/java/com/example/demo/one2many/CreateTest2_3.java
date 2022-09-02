@@ -1,5 +1,7 @@
 package com.example.demo.one2many;
 
+import javax.persistence.CascadeType;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -38,7 +40,8 @@ public class CreateTest2_3 {
 		m1.setMenuGroup(g);
 		m2.setMenuGroup(g);
 		
-		// 執行保存動作
+		// 執行保存動作 (聯級新增)
+		// 在 MenuGroup 1 的一方加上 cascade = CascadeType.PERSIST
 		menuGroupRepository.save(g);
 	}
 }
