@@ -41,6 +41,7 @@ public class CreateTest {
 		c2.getStudents().add(s2);
 		c3.getStudents().add(s2);
 		
+		// 執行保存
 		studentRepository.save(s1);
 		studentRepository.save(s2);
 		courseRepository.save(c1);
