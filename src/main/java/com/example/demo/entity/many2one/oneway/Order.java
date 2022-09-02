@@ -1,5 +1,6 @@
 package com.example.demo.entity.many2one.oneway;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,7 +22,7 @@ public class Order {
 	
 	// 單向多對一
 	@JoinColumn(name = "customer_id")
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.MERGE)
 	private Customer customer;
 	
 	public Order() {
