@@ -23,6 +23,13 @@ public class Order {
 	@JoinColumn(name = "customer_id")
 	@ManyToOne
 	private Customer customer;
+	
+	public Order() {
+	}
+	
+	public Order(String name) {
+		this.name = name;
+	}
 
 	public Long getId() {
 		return id;

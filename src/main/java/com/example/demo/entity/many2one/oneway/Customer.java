@@ -27,6 +27,16 @@ public class Customer {
 	@Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
 	@Temporal(TemporalType.TIMESTAMP) // 存放的格式: 時間(TIME), 日期(DATE), 時間+日期(TIMESTAMP)
 	private Date create = new Date();
+	
+	
+	public Customer() {
+		
+	}
+
+	public Customer(String name, Integer age) {
+		this.name = name;
+		this.age = age;
+	}
 
 	public Long getId() {
 		return id;
